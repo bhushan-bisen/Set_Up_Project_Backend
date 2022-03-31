@@ -51,6 +51,23 @@ public class logInController {
 		}
 		return login;
 	} 
+	@PostMapping("/loginuser1")
+	@CrossOrigin(origins="http://localhost:4200/login")
+	public logIn logindata1(@RequestBody logIn logindata ) throws Exception
+	{
+		String mail=logindata.getMail();
+		logIn login=null;
+		if(mail!=null)
+		{
+		login=repo.findByMail(mail);	
+	}
+		if(login==null)
+		{
+			throw new Exception("user does not exist");
+		}
+		return login;
+	} 
+
 }
 
 

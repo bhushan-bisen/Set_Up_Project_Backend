@@ -7,5 +7,6 @@ import com.example.accolite.model.logIn;
 public interface logInRepo extends JpaRepository<logIn,Integer>{
 
 	public logIn findByMailAndPassword(String mail,String password);
+	public logIn findByMail(String mail);
 
 }
