@@ -60,7 +60,7 @@ public class logInController {
 		if(mail!=null)
 		{
 		login=repo.findByMail(mail);	
-	}
+		}
 		if(login==null)
 		{
 			throw new Exception("user does not exist");
